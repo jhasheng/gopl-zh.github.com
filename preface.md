@@ -1,29 +1,26 @@
-# Go语言圣经（中文版）
+# 前言
+
+## Go语言圣经（中文版）
 
 Go语言圣经 [《The Go Programming Language》](http://gopl.io) 中文版本，仅供学习交流之用。
 
-[![](cover_middle.jpg)](https://github.com/golang-china/gopl-zh)
+[![](.gitbook/assets/cover_middle.jpg)](https://github.com/golang-china/gopl-zh)
 
-- 项目主页：http://github.com/golang-china/gopl-zh
-- 项目主页：http://bitbucket.org/golang-china/gopl-zh
-- 原版官网：http://gopl.io
-
+* 项目主页：[http://github.com/golang-china/gopl-zh](http://github.com/golang-china/gopl-zh)
+* 项目主页：[http://bitbucket.org/golang-china/gopl-zh](http://bitbucket.org/golang-china/gopl-zh)
+* 原版官网：[http://gopl.io](http://gopl.io)
 
 在线预览：
 
-- https://gopl-zh.shanyy.xyz
-- https://docs.hacknode.org/gopl-zh/
-- http://books.studygolang.com/gopl-zh/
+* [https://gopl-zh.shanyy.xyz](https://gopl-zh.shanyy.xyz)
+* [https://docs.hacknode.org/gopl-zh/](https://docs.hacknode.org/gopl-zh/)
+* [http://books.studygolang.com/gopl-zh/](http://books.studygolang.com/gopl-zh/)
 
-{% include "./version.md" %}
+## 译者序
 
--------
+在上个世纪70年代，贝尔实验室的\[Ken Thompson\]\[KenThompson\]和\[Dennis M. Ritchie\]\[DennisRitchie\]合作发明了[UNIX](http://doc.cat-v.org/unix/)操作系统，同时\[Dennis M. Ritchie\]\[DennisRitchie\]为了解决[UNIX](http://doc.cat-v.org/unix/)系统的移植性问题而发明了C语言，贝尔实验室的[UNIX](http://doc.cat-v.org/unix/)和C语言两大发明奠定了整个现代IT行业最重要的软件基础（目前的三大桌面操作系统的中[Linux](http://www.linux.org/)和[Mac OS X](http://www.apple.com/cn/osx/)都是源于[UNIX](preface.md)系统，两大移动平台的操作系统iOS和Android也都是源于[UNIX](http://doc.cat-v.org/unix/)系统。C系家族的编程语言占据统治地位达几十年之久）。在[UNIX](preface.md)和C语言发明40年之后，目前已经在Google工作的[Ken Thompson](http://genius.cat-v.org/ken-thompson/)和[Rob Pike](http://genius.cat-v.org/rob-pike/)（他们在贝尔实验室时就是同事）、还有[Robert Griesemer](http://research.google.com/pubs/author96.html)（设计了V8引擎和HotSpot虚拟机）一起合作，为了解决在21世纪多核和网络化环境下越来越复杂的编程问题而发明了Go语言。从Go语言库早期代码库日志可以看出它的演化历程（Git用`git log --before={2008-03-03} --reverse`命令查看）：
 
-# 译者序
-
-在上个世纪70年代，贝尔实验室的[Ken Thompson][KenThompson]和[Dennis M. Ritchie][DennisRitchie]合作发明了[UNIX](http://doc.cat-v.org/unix/)操作系统，同时[Dennis M. Ritchie][DennisRitchie]为了解决[UNIX](http://doc.cat-v.org/unix/)系统的移植性问题而发明了C语言，贝尔实验室的[UNIX](http://doc.cat-v.org/unix/)和C语言两大发明奠定了整个现代IT行业最重要的软件基础（目前的三大桌面操作系统的中[Linux](http://www.linux.org/)和[Mac OS X](http://www.apple.com/cn/osx/)都是源于[UNIX]()系统，两大移动平台的操作系统iOS和Android也都是源于[UNIX](http://doc.cat-v.org/unix/)系统。C系家族的编程语言占据统治地位达几十年之久）。在[UNIX]()和C语言发明40年之后，目前已经在Google工作的[Ken Thompson](http://genius.cat-v.org/ken-thompson/)和[Rob Pike](http://genius.cat-v.org/rob-pike/)（他们在贝尔实验室时就是同事）、还有[Robert Griesemer](http://research.google.com/pubs/author96.html)（设计了V8引擎和HotSpot虚拟机）一起合作，为了解决在21世纪多核和网络化环境下越来越复杂的编程问题而发明了Go语言。从Go语言库早期代码库日志可以看出它的演化历程（Git用`git log --before={2008-03-03} --reverse`命令查看）：
-
-![](./images/go-log04.png)
+![](.gitbook/assets/go-log04.png)
 
 从早期提交日志中也可以看出，Go语言是从[Ken Thompson](http://genius.cat-v.org/ken-thompson/)发明的B语言、[Dennis M. Ritchie](http://genius.cat-v.org/dennis-ritchie/)发明的C语言逐步演化过来的，是C语言家族的成员，因此很多人将Go语言称为21世纪的C语言。纵观这几年来的发展趋势，Go语言已经成为云计算、云存储时代最重要的基础编程语言。
 
@@ -39,29 +36,17 @@ Go语言圣经 [《The Go Programming Language》](http://gopl.io) 中文版本�
 
 2016年 1月 于 武汉
 
--------
+## 前言
 
-# 前言
+_“Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：_[http://golang.org](http://golang.org) _）_
 
-*“Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：http://golang.org ）*
+Go语言由来自Google公司的[Robert Griesemer](http://research.google.com/pubs/author96.html)，[Rob Pike](http://genius.cat-v.org/rob-pike/)和[Ken Thompson](http://genius.cat-v.org/ken-thompson/)三位大牛于2007年9月开始设计和实现，然后于2009年的11月对外正式发布（译注：关于Go语言的创世纪过程请参考 [http://talks.golang.org/2015/how-go-was-made.slide](http://talks.golang.org/2015/how-go-was-made.slide) ）。语言及其配套工具的设计目标是具有表达力，高效的编译和执行效率，有效地编写高效和健壮的程序。
 
-Go语言由来自Google公司的[Robert Griesemer](http://research.google.com/pubs/author96.html)，[Rob Pike](http://genius.cat-v.org/rob-pike/)和[Ken Thompson](http://genius.cat-v.org/ken-thompson/)三位大牛于2007年9月开始设计和实现，然后于2009年的11月对外正式发布（译注：关于Go语言的创世纪过程请参考 http://talks.golang.org/2015/how-go-was-made.slide ）。语言及其配套工具的设计目标是具有表达力，高效的编译和执行效率，有效地编写高效和健壮的程序。
+Go语言有着和C语言类似的语法外表，和C语言一样是专业程序员的必备工具，可以用最小的代价获得最大的战果。 但是它不仅仅是一个更新的C语言。它还从其他语言借鉴了很多好的想法，同时避免引入过度的复杂性。 Go语言中和并发编程相关的特性是全新的也是有效的，同时对数据抽象和面向对象编程的支持也很灵活。 Go语言同时还集成了自动垃圾收集技术用于更好地管理内存。
 
-Go语言有着和C语言类似的语法外表，和C语言一样是专业程序员的必备工具，可以用最小的代价获得最大的战果。
-但是它不仅仅是一个更新的C语言。它还从其他语言借鉴了很多好的想法，同时避免引入过度的复杂性。
-Go语言中和并发编程相关的特性是全新的也是有效的，同时对数据抽象和面向对象编程的支持也很灵活。
-Go语言同时还集成了自动垃圾收集技术用于更好地管理内存。
+Go语言尤其适合编写网络服务相关基础设施，同时也适合开发一些工具软件和系统软件。 但是Go语言确实是一个通用的编程语言，它也可以用在图形图像驱动编程、移动应用程序开发 和机器学习等诸多领域。目前Go语言已经成为受欢迎的作为无类型的脚本语言的替代者： 因为Go编写的程序通常比脚本语言运行的更快也更安全，而且很少会发生意外的类型错误。
 
-Go语言尤其适合编写网络服务相关基础设施，同时也适合开发一些工具软件和系统软件。
-但是Go语言确实是一个通用的编程语言，它也可以用在图形图像驱动编程、移动应用程序开发
-和机器学习等诸多领域。目前Go语言已经成为受欢迎的作为无类型的脚本语言的替代者：
-因为Go编写的程序通常比脚本语言运行的更快也更安全，而且很少会发生意外的类型错误。
-
-Go语言还是一个开源的项目，可以免费获取编译器、库、配套工具的源代码。
-Go语言的贡献者来自一个活跃的全球社区。Go语言可以运行在类[UNIX](http://doc.cat-v.org/unix/)系统——
-比如[Linux](http://www.linux.org/)、[FreeBSD](https://www.freebsd.org/)、[OpenBSD](http://www.openbsd.org/)、[Mac OSX](http://www.apple.com/cn/osx/)——和[Plan9](http://plan9.bell-labs.com/plan9/)系统和[Microsoft Windows](https://www.microsoft.com/zh-cn/windows/)操作系统之上。
-Go语言编写的程序无需修改就可以运行在上面这些环境。
+Go语言还是一个开源的项目，可以免费获取编译器、库、配套工具的源代码。 Go语言的贡献者来自一个活跃的全球社区。Go语言可以运行在类[UNIX](http://doc.cat-v.org/unix/)系统—— 比如[Linux](http://www.linux.org/)、[FreeBSD](https://www.freebsd.org/)、[OpenBSD](http://www.openbsd.org/)、[Mac OSX](http://www.apple.com/cn/osx/)——和[Plan9](http://plan9.bell-labs.com/plan9/)系统和[Microsoft Windows](https://www.microsoft.com/zh-cn/windows/)操作系统之上。 Go语言编写的程序无需修改就可以运行在上面这些环境。
 
 本书是为了帮助你开始以有效的方式使用Go语言，充分利用语言本身的特性和自带的标准库去编写清晰地道的Go程序。
 
-{% include "./links.md" %}
